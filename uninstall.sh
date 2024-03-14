@@ -11,5 +11,5 @@ fi
 
 rm $prefix/krunner/dbusplugins/plasma-runner-epochreadable.desktop
 rm $prefix/dbus-1/services/org.kde.epochreadable.service
-kquitapp5 krunner
+kquitapp6 krunner 2>/dev/null
 
