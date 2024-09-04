@@ -1,13 +1,19 @@
 {
     "app-id": "org.kde.epochreadable",
-    "runtime": "org.kde.Platform",
-    "runtime-version": "6.7",
-    "sdk": "org.kde.Sdk",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "44",
+    "sdk" : "org.gnome.Sdk",
     "modules": [
         {
             "name": "runner",
+            "build-options": {
+                "build-args": [
+                    "--share=network"
+                ]
+            },
             "buildsystem": "simple",
             "build-commands": [
+                "pip3 install dbus-python",
                 "install -D epochreadable.py /app/bin/epochreadable.py",
                 "install -D clipboard.py /app/bin/clipboard.py",
                 "install -D org.kde.epochreadable.desktop /app/share/applications/org.kde.epochreadable.desktop",
@@ -30,7 +36,6 @@
                   "type": "file",
                   "path" : "org.kde.epochreadable.service"
                 }
-
             ]
         }
     ]

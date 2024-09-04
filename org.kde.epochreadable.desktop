@@ -4,6 +4,8 @@ Comment=epochreadable Runner written in Python
 X-KDE-ServiceTypes=Plasma/Runner
 Type=Service
 Icon=clock
+# Having an exec line is mandatory...
+Exec=/bin/false
 X-KDE-PluginInfo-Author=Luke Driscoll
 X-KDE-PluginInfo-Email=luke.driscoll@gmail.com
 X-KDE-PluginInfo-Name=epochreadable
