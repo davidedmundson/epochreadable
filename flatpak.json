@@ -1,0 +1,37 @@
+{
+    "app-id": "org.kde.epochreadable",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "6.7",
+    "sdk": "org.kde.Sdk",
+    "modules": [
+        {
+            "name": "runner",
+            "buildsystem": "simple",
+            "build-commands": [
+                "install -D epochreadable.py /app/bin/epochreadable.py",
+                "install -D clipboard.py /app/bin/clipboard.py",
+                "install -D org.kde.epochreadable.desktop /app/share/applications/org.kde.epochreadable.desktop",
+                "install -D org.kde.epochreadable.service /app/share/dbus-1/services/org.kde.epochreadable.service"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "path": "epochreadable.py"
+                },
+                {
+                    "type": "file",
+                    "path": "clipboard.py"
+                },
+                {
+                  "type": "file",
+                  "path" : "org.kde.epochreadable.desktop"
+                },
+                {
+                  "type": "file",
+                  "path" : "org.kde.epochreadable.service"
+                }
+
+            ]
+        }
+    ]
+}
