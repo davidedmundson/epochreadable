@@ -13,7 +13,7 @@
             },
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install dbus-python",
+                "pip3 install dbus-python --prefix=${FLATPAK_DEST}",
                 "install -D epochreadable.py /app/bin/epochreadable.py",
                 "install -D clipboard.py /app/bin/clipboard.py",
                 "install -D org.kde.epochreadable.desktop /app/share/applications/org.kde.epochreadable.desktop",
